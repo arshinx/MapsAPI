@@ -471,8 +471,10 @@ function displayImages3(data){
         };
        // $('.options-box').refresh('listview');
        var el = document.getElementById('#showListView');
-       console.log(el);
-      el.addEventListener('click', showingListView);
+       if (el) {
+         console.log(el);
+         el.addEventListener('click', showingListView);
+       }
 
       // This function will loop through the markers array and display them all.
       function showListings() {
