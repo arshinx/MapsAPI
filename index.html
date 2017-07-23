@@ -466,22 +466,24 @@ function displayImages3(data){
         }
       }
 
+      function addLocation(title) {
+        var x = document.getElementById("mySelect");
+        var option = document.createElement("option");
+        option.text = title;
+        x.add(option);
+      }
+
       function showingListView() {
 
         var x = document.getElementById("mySelect");
         var option = document.createElement("option");
-        option.text = locations[0].title;
-        x.add(option);
+        option.text = locations[2].title;
+        x.add(option); 
 
-        // $.each(all_objects, function() {
-        //     var list_route = "<li><a href='#show-listings'>" + this.text + "</a></li>";
-        //     $('.options-box').append(locations.title);  
-        console.log("Begin - Show list view method");
+        console.log("Begin For Loop");
 
         for (i=0, i < locations[i].title.length; i++;) {
-          console.log("Loop");
-          option.text = locations[1].title;
-          x.add(option);
+          addLocation(locations[i].title);
         }
           
           console.log("done");
