@@ -474,18 +474,18 @@ function displayImages3(data){
         //     $('.options-box').append(locations.title);  
         console.log("Begin - Show list view method");  
           text= "<ul>";
-          console.log(text);
-          console.log(locations[0].title.length);
+          var title = "";
           var list = document.getElementById('locationList');
-          console.log(document.getElementById("locationList"))
           for (i=0, i < locations[i].title.length; i++;) {
-            text = text + "<li>" + locations[i].title + "</li>";
+            title = locations[i].title;
+            text = text + "<li>" + title + "</li>";
             console.log(text);
-            //document.getElementById("locationList").innerHTML = locations[i].title;
+            console.log(title);
+            //document.getElementById("locationList").innerHTML = title;
             var li = document.createElement('li');
             li.innerHTML = locations[i].title;
             list.insertBefore(li, list.firstChild);
-            //('#showListView').push(locations[i].title);
+            ('#showListView').push(locations[i].title);
           }
           
           console.log("done");
