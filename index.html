@@ -187,6 +187,14 @@ function displayImages3(data){
         <div id= "listView"> 
           <input id="showListView" type="button" value="Show list">
           <ul id="locationList"></ul>
+          <form>
+            <select id="mySelect" size="8">
+              <option>Apple</option>
+              <option>Pear</option>
+              <option>Banana</option>
+              <option>Orange</option>
+            </select>
+          </form>
         </div>
       </div>
       <div id="map"></div>
@@ -477,22 +485,11 @@ function displayImages3(data){
         //     var list_route = "<li><a href='#show-listings'>" + this.text + "</a></li>";
         //     $('.options-box').append(locations.title);  
         console.log("Begin - Show list view method");  
-          text= "<ul>";
-          var title = "";
-          var titles = []
+
           for (i=0, i < locations[i].title.length; i++;) {
             title = locations[i].title;
-            text = text + "<li>" + title + "</li>";
-            console.log(text);
             console.log(title);
-            console.log("hello");
-            //document.getElementById("locationList").innerHTML = title;
-            li = document.createElement('li').innerHTML = "Hey";
-            list.add(li);
           }
-
-          var lil = document.createElement('li').innerHTML = "Hi";
-          list.add(li);
           
           console.log("done");
 
