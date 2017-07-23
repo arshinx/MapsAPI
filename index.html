@@ -478,7 +478,9 @@ function displayImages3(data){
         //     $('.options-box').append(locations.title);  
         console.log("Begin - Show list view method");
 
-         
+        for (loc in locations) {
+           console.log(loc);
+        }  
 
         for (i=0, i < locations[i].title.length; i++;) {
           title = locations[i].title;
