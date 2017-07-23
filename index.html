@@ -89,7 +89,7 @@
         width: 24%;
       }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       //See here: https://stackoverflow.com/questions/33591826/create-google-map-with-geotagged-flickr-photos
 
@@ -455,15 +455,19 @@ function displayImages3(data){
       }
 
       function showingListView() {
-        $.each(all_objects, function() {
-            var list_route = "<li><a href='#show-listings'>" + this.text + "</a></li>";
-            $('.options-box').append(locations.title);      
-        });
-       // $('.options-box').refresh('listview');
-      }
-      document.getElementById('showListView').addEventListener('click', showingListView);
-`
+        // $.each(all_objects, function() {
+        //     var list_route = "<li><a href='#show-listings'>" + this.text + "</a></li>";
+        //     $('.options-box').append(locations.title);    
+          text= "<ul>";
+          for (i=0, i<Locations.title.length; i++;) {
+            text += "<li>" + Locations.title[i] + "</li>";
+          }
+          ('#showListView').push(Locations.title);
+          console.log("done");
 
+        };
+       // $('.options-box').refresh('listview');
+      //document.getElementById('#showListView').addEventListener('click', showingListView);
 
       // This function will loop through the markers array and display them all.
       function showListings() {
@@ -480,7 +484,7 @@ function displayImages3(data){
       function hideMarkers(markers) {
         for (var i = 0; i < markers.length; i++) {
           markers[i].setMap(null);
-        }
+        }
       }
 
       // This function takes in a COLOR, and then creates a new marker
