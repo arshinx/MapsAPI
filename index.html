@@ -476,10 +476,11 @@ function displayImages3(data){
           console.log(text);
           console.log(locations[0].title.length);
           for (i=0, i < locations[i].title.length; i++;) {
-            text += "<li>" + locations.title[i] + "</li>";
+            text += "<li>" + locations[i].title + "</li>";
             console.log(text);
+            ('#showListView').push(locations[i].title);
           }
-          ('showListView').push(locations.title);
+          
           console.log("done");
 
         };
