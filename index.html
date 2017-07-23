@@ -479,6 +479,7 @@ function displayImages3(data){
           for (i=0, i < locations[i].title.length; i++;) {
             text = text + "<li>" + locations[i].title + "</li>";
             console.log(text);
+            document.getElementById("locationList").innerHTML += locations[i].title;
             //('#showListView').push(locations[i].title);
           }
           
