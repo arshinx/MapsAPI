@@ -455,6 +455,19 @@ function displayImages3(data){
       }
 
       function showingListView() {
+
+        var locations = [
+          {title: 'Central Park', location: {lat: 40.785091, lng: -73.968285}},
+          {title: 'Empire State Building', location: {lat: 40.748817, lng: -73.985428}},
+          {title: 'Times Square', location: {lat: 40.758896, lng: -73.985130}},
+          {title: 'Statue of Liberty', location: {lat: 40.689247, lng: -74.044502}},
+          {title: 'Butler Library', location: {lat: 40.806290, lng: -73.963005}},
+          {title: 'Chelsea Market', location: {lat: 40.742352, lng: -74.006210}},
+          {title: 'Midtown', location: {lat: 40.754932, lng: -73.984016}},
+          {title: 'Bronx Zoo', location: {lat: 40.852905, lng: -73.872971}},
+          {title: 'Yankee Stadium', location: {lat: 40.829659, lng: -73.926186}},
+        ];
+
         // $.each(all_objects, function() {
         //     var list_route = "<li><a href='#show-listings'>" + this.text + "</a></li>";
         //     $('.options-box').append(locations.title);  
@@ -471,6 +484,7 @@ function displayImages3(data){
           console.log("done");
 
         };
+
        // $('.options-box').refresh('listview');
        var el = document.getElementById('showListView');
        if (el) {
