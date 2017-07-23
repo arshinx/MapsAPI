@@ -475,6 +475,7 @@ function displayImages3(data){
         console.log("Begin - Show list view method");  
           text= "<ul>";
           var title = "";
+          var li = document.createElement('li');
           var list = document.getElementById('locationList');
           for (i=0, i < locations[i].title.length; i++;) {
             title = locations[i].title;
@@ -482,7 +483,6 @@ function displayImages3(data){
             console.log(text);
             console.log(title);
             //document.getElementById("locationList").innerHTML = title;
-            var li = document.createElement('li');
             li.innerHTML = locations[i].title;
             list.insertBefore(li, list.firstChild);
             //('#showListView').push(locations[i].title);
