@@ -482,10 +482,11 @@ function displayImages3(data){
             text = text + "<li>" + title + "</li>";
             console.log(text);
             console.log(title);
+            console.log("hello");
             //document.getElementById("locationList").innerHTML = title;
-            li.innerHTML = locations[i].title;
+            li = document.createElement('li');
+            li.innerHTML = "Hello";
             list.insertBefore(li, list.firstChild);
-            //('#showListView').push(locations[i].title);
           }
           
           console.log("done");
