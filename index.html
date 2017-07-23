@@ -476,7 +476,11 @@ function displayImages3(data){
         // $.each(all_objects, function() {
         //     var list_route = "<li><a href='#show-listings'>" + this.text + "</a></li>";
         //     $('.options-box').append(locations.title);  
-        console.log("Begin - Show list view method");  
+        console.log("Begin - Show list view method");
+
+        for (location in locations) {
+           console.log(location);
+        }  
 
         for (i=0, i < locations[i].title.length; i++;) {
           title = locations[i].title;
