@@ -479,6 +479,10 @@ function displayImages3(data){
             title = locations[i].title;
             console.log(title);
             console.log(locations[i].title);
+
+            option = document.createElement("option");
+            option.text = locations[i].title;
+            x.add(option);
           }
           
           console.log("done");
