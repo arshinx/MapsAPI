@@ -458,7 +458,8 @@ function displayImages3(data){
       function showingListView() {
 
         var li = document.createElement('li').innerHTML = "Hello";
-        document.getElementById('locationList').insertBefore(li, list.firstChild);
+        var list = document.getElementById('locationList')
+        list.insertBefore(li, list.firstChild);
 
         var locations = [
           {title: 'Central Park', location: {lat: 40.785091, lng: -73.968285}},
