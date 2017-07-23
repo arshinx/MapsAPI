@@ -465,9 +465,10 @@ function displayImages3(data){
 
       function showingListView() {
 
-        var li = document.createElement('li').innerHTML = "Hello";
-        var list = document.getElementById('locationList')
-        list.add(li);
+        var x = document.getElementById("mySelect");
+        var option = document.createElement("option");
+        option.text = "Kiwi";
+        x.add(option);
 
         var locations = [
           {title: 'Central Park', location: {lat: 40.785091, lng: -73.968285}},
