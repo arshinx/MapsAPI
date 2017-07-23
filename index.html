@@ -476,10 +476,15 @@ function displayImages3(data){
           text= "<ul>";
           console.log(text);
           console.log(locations[0].title.length);
+          var list = document.getElementById('locationList');
+          console.log(document.getElementById("locationList"))
           for (i=0, i < locations[i].title.length; i++;) {
             text = text + "<li>" + locations[i].title + "</li>";
             console.log(text);
-            document.getElementById("locationList").innerHTML += locations[i].title;
+            //document.getElementById("locationList").innerHTML = locations[i].title;
+            var li = document.createElement('li');
+            li.innerHTML = locations[i].title;
+            list.insertBefore(li, list.firstChild);
             //('#showListView').push(locations[i].title);
           }
           
